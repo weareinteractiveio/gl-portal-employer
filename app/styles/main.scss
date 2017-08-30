@@ -1,0 +1,24 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// Custom
+@import "partials/colours.scss";
+@import "partials/global.scss";
+@import "partials/breakpoints.scss";
+@import "partials/mixins.scss";
+@import "partials/fonts.scss";
+@import "partials/icons.scss";
+@import "partials/type.scss";
+@import "partials/buttons.scss";
+@import "partials/nav.scss";
+@import "partials/heros.scss";
+@import "partials/sections.scss";
+@import "partials/carousels.scss";
+@import "partials/forms.scss";
+@import "partials/footer.scss";
+
+// Plugins
+@import "partials/flickity.scss";
