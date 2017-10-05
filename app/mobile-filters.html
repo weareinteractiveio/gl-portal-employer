@@ -1,0 +1,705 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wai Seed Project</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script src="https://use.fontawesome.com/0e253c493d.js"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <!-- Jquery Ui Css -->
+    <link rel="stylesheet" href="./styles/jquery-ui.css">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <!-- Nav Logged In -->
+    <nav class="navbar navbar-default wai-nav no-margin">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <a href="#!"><img src="images/wai-nav-icon.svg" width="30px" height="30px" /></a>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="images/gl-logo.svg" width="120px"></a>
+          <a href="#!" class="search visible-xs"><img src="images/search.svg" width="30px" height="30px" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse mobile-navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right mobile-nav-logged-in">
+            <li class="hidden-xs"><a href="search.html">Search</a></li>
+            <li class="user hidden-xs">
+              <a href="#">My Account
+                <span class="user icon-user"></span>
+                <span class="notification">2</span>
+              </a>
+            </li>
+            <li class="login-btn hidden-xs">
+              <a href="#!" class="btn btn-default navbar-btn wai-navbar-btn">Logout</a>
+            </li>
+            <li><a href="search.html" class="visible-xs">Job Search <span class="icon-magnifier mobile-nav"></a></li>
+            <li><a href="#!" class="visible-xs">My Favourites <span class="notification">6</span> <span class="icon-star mobile-nav"></a></li>
+            <li><a href="#!" class="visible-xs">Applied Jobs <span class="notification">1</span> <span class="icon-register mobile-nav"></a></li>
+            <li><a href="#!" class="visible-xs">Viewed Jobs <span class="icon-eye mobile-nav"></a></li>
+            <li><a href="#!" class="visible-xs">My Profile <span class="icon-user mobile-nav"></a></li>
+            <li><a href="#!" class="visible-xs">Logout <span class="icon-exit mobile-nav"></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Add js to show and hide this on click, remove inline display none -->
+    <div class="search-nav visible-xs" style="display: none!important;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="text" class="form-control job" id="exampleInputName2" placeholder="Job Title">
+                <span class="form-control-feedback icon-magnifier wai-icon" aria-hidden="true"></span>
+              </div>
+              <div class="form-group search-form-group">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Location">
+                <span class="form-control-feedback icon-map-marker wai-icon" aria-hidden="true"></span>
+              </div>
+              <button type="submit" class="btn btn-default wai-btn wai-btn-full">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="filter-bar filter-bar-map" style="display: none;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <form class="gl-forms booking-form">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group gl-form-group">
+                    <input type="text" placeholder="Licence type" class="form-control gl-select-green input-clean">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group gl-form-group">
+                    <input type="text" placeholder="Location" class="form-control gl-select-green input-clean gl-form-input-space">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group gl-form-group">
+                    <select class="form-control">
+                      <option>+ 2 miles</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group gl-form-group">
+                    <p class="results">Showing 247 results</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <div class="filter-btn-wrap">
+              <ul>
+                <li><a href="#!" class="wai-btn filter-btn selected">Filters <span class="icon-chevron-down arrow"></span></a></li>
+                <li><a href="map.html" class="wai-btn filter-btn"><span class="icon-map2 map"></span> Map</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add js to open and close this on click of the filter button, remove the inline display none -->
+    <section class="filter-block" style="display: none;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-2">
+                <p class="title">Filter results</p>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Job status</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="checkbox-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Part time
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Full time
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Contract
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>My licenses</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="checkbox-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              SIA Door supervisor
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              UK Driving Licence
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Other licenses</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="checkbox-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              SIA Close protection
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row row-plus-sml">
+                  <div class="col-md-12">
+                    <p>Sort by</p>
+                    <div class="wai-pills-wrapper">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="nav nav-pills wai-pills">
+                            <li role="presentation" class="active"><a href="#">DISTANCE</a></li>
+                            <li role="presentation"><a href="#">SALARY</a></li>
+                            <li role="presentation"><a href="#">DATE</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="filter-block-btns">
+                      <li><a href="#!" class="wai-btn wai-btn-clean no-x-pad">Clear all</a></li>
+                      <li><a href="#!" class="wai-btn">Apply</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile search">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h4>Filter results</h4>
+            <div class="row">
+              <div class="col-md-12">
+                <form class="form-inline mobile-filter-form">
+                  <div class="form-group">
+                    <input type="text" class="form-control job" id="exampleInputName2" placeholder="Job Title">
+                  </div>
+                  <div class="form-group search-form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Location">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  Max distance
+                </p>
+              </div>
+            </div>
+            <div class="row cs-form-group row-plus">
+              <div class="col-md-12">
+                <div class="gl-slider">
+                  <div class="gl-slider-number">
+                    <p>0 – 2 miles</p>
+                  </div>
+                  <div class="gl-slider-bar ui-slider slider"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  My Criteria
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="filter-pills">
+                  <div class="filter-pill">
+                    <p>Manchester</p>
+                    <a href="#!"><span class="icon-cross"></span></a>
+                  </div>
+                  <div class="filter-pill">
+                    <p>Door Supervisor</p>
+                    <a href="#!"><span class="icon-cross"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  Sort by
+                </p>
+              </div>
+            </div>
+            <div class="wai-pills-wrapper">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills wai-pills">
+                    <li role="presentation" class="active"><a href="#">DISTANCE</a></li>
+                    <li role="presentation"><a href="#">SALARY</a></li>
+                    <li role="presentation"><a href="#">DATE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  My Licenses
+                </p>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Door Supervisor
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  UK Driving Licence
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  Other Licenses
+                </p>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Door Supervisor
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  UK Driving Licence
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  UK Driving Licence
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  Job Status
+                </p>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Full Time
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Part Time
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Contract
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="left-pan-title">
+                  Company Search
+                </p>
+              </div>
+            </div>
+            <div class="row row-plus-sml">
+              <div class="col-md-12">
+                <form class="wai-form">
+                  <div class="form-group">
+                    <input type="search" class="form-control company-name-input" id="search" placeholder="Enter company name">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row row-plus-x-sml">
+              <div class="col-md-12">
+                <p><a href="#!" class="wai-btn">Apply filters</a></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p><a href="#!" class="wai-btn wai-btn-clean orange">Clear filters</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9" style="display: none;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="gl-card jp-search-card">
+                  <div class="row row-flex row-plus-x-sml">
+                    <div class="col-md-6 col-flex">
+                      <p class="sr-title">
+                        Store security guard
+                      </p>
+                      <div class="star"><img src="images/green-star.svg" alt="Green star" width="20px"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="ph">£8 p/h</p>
+                    </div>
+                  </div>
+                  <div class="row row-flex">
+                    <div class="col-md-6">
+                      <p class="brand"><span>Tesco</span> Salford Quays</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="text-right">14 Days ago</p>
+                    </div>
+                  </div>
+                  <div class="card-license-wrap">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Licences required</p>
+                      </div>
+                    </div>
+                    <div class="row row-flex">
+                      <div class="col-md-4 col-flex">
+                        <p class="card-icon"><span class="icon-profile"></span></p>
+                        <p class="card-license">Door Supervisor</p>
+                      </div>
+                      <div class="col-md-4 col-flex">
+                        <p class="card-icon"><span class="icon-car2"></span></p>
+                        <p class="card-license">Full UK Driving Licence</p>
+                      </div>
+                      <div class="col-md-4">
+                        <p class="text-right"><a href="jobpage.html" class="wai-btn">View Job</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gl-card jp-search-card">
+                  <div class="row row-flex row-plus-x-sml">
+                    <div class="col-md-6 col-flex">
+                      <p class="sr-title">
+                        Security Guard
+                      </p>
+                      <div class="star"><img src="images/green-star.svg" alt="Green star" width="20px"></div>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="ph">£12 p/h</p>
+                    </div>
+                  </div>
+                  <div class="row row-flex">
+                    <div class="col-md-6">
+                      <p class="brand"><span>B &amp; Q</span> Preston</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="text-right">14 Days ago</p>
+                    </div>
+                  </div>
+                  <div class="card-license-wrap">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Licences required</p>
+                      </div>
+                    </div>
+                    <div class="row row-flex">
+                      <div class="col-md-4 col-flex">
+                        <p class="card-icon"><span class="icon-profile"></span></p>
+                        <p class="card-license">Door Supervisor</p>
+                      </div>
+                      <div class="col-md-4 col-flex">
+                        <p class="card-icon"><span class="icon-car2"></span></p>
+                        <p class="card-license">Full UK Driving Licence</p>
+                      </div>
+                      <div class="col-md-4">
+                        <p class="text-right"><a href="#!" class="wai-btn">View Job</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <nav class="pull-right gl-pagination">
+                      <ul class="pagination">
+                        <li><a href="#!" aria-label="previous"><span aria-hidden="true" class="icon-chevron-left"></span></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li><a href="#!">2</a></li>
+                        <li><a href="#!">3</a></li>
+                        <li><a href="#!">4</a></li>
+                        <li><a href="#!">5</a></li>
+                        <li><a href="#!" aria-label="next"><span aria-hidden="true" class="icon-chevron-right"></span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sitemap hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">About us</p>
+            <ul class="sitemap-list">
+              <li><a href="about-us.html">Our family</a></li>
+              <li><a href="about-us.html">Our values</a></li>
+              <li><a href="about-us.html">Our courses</a></li>
+              <li><a href="corporate.html">Our corporate offering</a></li>
+              <li><a href="contact-us.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Popular courses</p>
+            <ul class="sitemap-list">
+              <li><a href="course.html">Door supervisor</a></li>
+              <li><a href="course.html">Security guard</a></li>
+              <li><a href="course.html">CCTV</a></li>
+              <li><a href="course.html">Close protection</a></li>
+              <li><a href="course.html">Personal license</a></li>
+              <li><a href="course.html">First aid</a></li>
+              <li><a href="course.html">Physical intervention    </a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Locations</p>
+            <ul class="sitemap-list">
+              <li><a href="location.html">Birmingham</a></li>
+              <li><a href="location.html">Brighton</a></li>
+              <li><a href="location.html">Bristol</a></li>
+              <li><a href="location.html">Leeds</a></li>
+              <li><a href="location.html">Manchester</a></li>
+              <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
+                <div class="panel panel-default gl-panel">
+                  <div role="tab" id="headingZero" class="panel-heading gl-panel-heading">
+                    <h4 class="panel-title gl-panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="true" aria-controls="collapseZero" class="gl-footer-accordion">
+                        <collapsible>More locations<span class="icon-plus gl-sitemap-icon"></span></collapsible></a></h4>
+                  </div>
+                  <div id="collapseZero" role="tabpanel" aria-labelledby="headingZero" class="panel-collapse collapse">
+                    <div class="panel-body gl-panel-body">
+                      <ul class="sitemap-list">
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="location.html">Location</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Licenses</p>
+            <ul class="sitemap-list">
+              <li><a href="license.html">SIA Door supervisor license</a></li>
+              <li><a href="license.html">SIA CCTV license</a></li>
+              <li><a href="license.html">SIA Security guard license</a></li>
+              <li><a href="license.html">SIA Close protection license</a></li>
+              <li><a href="how-to.html">How to apply for an SIA License</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Community</p>
+            <ul class="sitemap-list">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">General FAQ's</a></li>
+              <li><a href="#!">Chat with us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Social</p>
+            <ul class="sitemap-list">
+              <li>
+                <ul class="footer-social-icons">
+                  <li><a href="https://www.facebook.com/sialicence"><i class="fa fa-facebook fa-lg"></i></a></li>
+                  <li><a href="https://twitter.com/Get_Licensed"><i class="fa fa-twitter fa-lg"></i></a></li>
+                  <li><a href="https://plus.google.com/+getlicensed"><i class="fa fa-google fa-lg"></i></a></li>
+                  <li><a href="https://www.instagram.com/get_licensed/"><i class="fa fa-instagram fa-lg"></i></a></li>
+                  <li><a href="https://www.youtube.com/user/getlicensed"><i class="fa fa-youtube fa-lg"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-logos">
+              <p class="logo pull-left"><a href="#!"><img src="images/norton_secure_seal.svg" width="120px" height="65px" alt="Norton Secure Logo"></a></p>
+              <p class="logo pull-left"><a href="#!"><img src="http://awsmedia.s3.amazonaws.com/AWS_Logo_PoweredBy_127px.png" width="127px" height="48px" alt="Amazon logo"></a></p>
+              <p class="logo register-text pull-left">Get Licensed is a registered trademark of Get Licensed LLC. Get Licensed is an advertising platform and not a training provider.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="hidden-xs">
+      <div class="container footer-container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-content-wrapper">
+              <p class="footer-logo pull-left"><a href="#!"> <img src="images/get-licensed-logo-white.svg" width="120px" height="36px" alt="Get Licensed logo"></a></p>
+              <p class="copyright pull-left">© Copyright 2015 | All rights reserved | Call us 0207 078 7259</p>
+              <p class="terms pull-right"><a href="terms-and-conditions.html">Terms of service | Privacy policy</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Custom & plugin scripts -->
+    <script src="scripts/wai-nav.js"></script>
+    <script src="scripts/flickity.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $(".slider").slider({
+          range: true
+        });
+      });
+    </script>
+
+  </body>
+</html>

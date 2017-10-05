@@ -1,0 +1,17 @@
+.wai-pills-wrapper {
+	margin-bottom: 30px;
+	ul.wai-pills {
+		border-radius: 4px;
+		li {
+			a {
+				color: $grey;
+			}
+			&.active {
+				a {
+					background: $primary!important;
+					color: white;
+				}
+			}
+		}
+	}
+}

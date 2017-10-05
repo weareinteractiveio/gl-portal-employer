@@ -5,9 +5,10 @@ $icon-font-path: '../fonts/';
 // endbower
 
 // Custom
+@import "partials/gl-main.scss";
 @import "partials/colours.scss";
-@import "partials/global.scss";
 @import "partials/breakpoints.scss";
+@import "partials/global.scss";
 @import "partials/mixins.scss";
 @import "partials/fonts.scss";
 @import "partials/icons.scss";
@@ -18,6 +19,9 @@ $icon-font-path: '../fonts/';
 @import "partials/sections.scss";
 @import "partials/carousels.scss";
 @import "partials/forms.scss";
+@import "partials/modals.scss";
+@import "partials/tabs.scss";
+@import "partials/pills.scss";
 @import "partials/footer.scss";
 
 // Plugins

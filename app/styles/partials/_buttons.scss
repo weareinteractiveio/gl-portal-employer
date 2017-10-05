@@ -1,0 +1,91 @@
+.wai-btn {
+	background: $secondary;
+	padding: 12px 20px;
+	border-radius: 4px;
+	color: white;
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	// display: block;
+	border: 0;
+	@media screen and (max-width: $break-medium) {
+		padding: 15px;
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
+	@include transition (all 200ms ease);
+	&:hover {
+		color: white;
+		background: darken($secondary, 10%);
+		text-decoration: none;
+	}
+	&.white-border {
+		border: 1px solid white;
+		@include box-shadow(0px, 0px, 30px, lighten($black, 50%));
+	}
+	&.wai-form-btn {
+		margin-top: 20px;
+		border: 0;
+		box-shadow: none;
+	}
+	&.add-btn {
+		width: 100%;
+		background: transparent;
+		border: 1px solid $primary;
+		color: $primary;
+		padding: 6px 12px;
+		display: block;
+		text-align: center;
+	}
+	&.wai-btn-clean {
+		position: relative;
+		background: transparent;
+		border: 1px solid $primary;
+		color: $primary;
+		padding: 12px 40px 12px 20px;
+		span {
+			position: absolute;
+			top: 11px;
+			right: 15px;
+			font-size: 18px;
+		}
+		&:hover {
+			background: $primary;
+			color: white;
+		}
+		&.no-x-pad {
+			padding: 12px 20px;
+		}
+		@media screen and (max-width: $break-medium) {
+			padding: 15px;
+		}
+		&.orange {
+			border: 1px solid $secondary;
+			color: $secondary;
+			&:hover {
+				background: $secondary;
+				color: white;
+			}
+		}
+	}
+	&.wai-btn-full {
+		width: 100%;
+	}
+}
+
+.wai-btn-simple {
+	border: 0;
+	border-bottom: 1px solid lighten($black,50%);
+	padding: 0;
+	border-radius: 0;
+	color: lighten($black,50%);
+	&:hover {
+		background: transparent;
+	}
+	&.white {
+		color: white;
+		border-bottom: 1px solid white;
+	}
+}

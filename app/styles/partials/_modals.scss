@@ -1,0 +1,117 @@
+.wai-modal {
+	.content-container {
+		margin-top: 20px;
+		padding: 20px;
+		border: 1px solid lighten($black, 90%);
+		border-radius: 4px;
+		p.icon {
+			font-size: 20px;
+			margin-bottom: 20px;
+			span {
+				color: $primary;
+				font-size: 24px;
+				margin-right: 5px;
+			}
+		}
+		p.sub-title {
+			color: $grey;
+			margin-bottom: 20px;
+		}
+		ul.upload-btns {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 20px 0;
+			li {
+				display: inline-block;
+				margin-left: 8px;
+				&:first-child {
+					margin-left: 0;
+				}
+				@media screen and (max-width: $break-large) {
+					width: 100%;
+					margin: 10px 0 0 0;
+				}
+				a {
+					display: block;
+					padding: 10px 20px;
+					border: 1px solid $primary;
+					text-align: center;
+					color: $primary;
+					border-radius: 4px;
+					text-decoration: none;
+					@include transition (all 200ms ease);
+					&.highlight {
+						background-color: $primary;
+						color: white;
+						&:hover {
+							background-color: darken($primary, 5%);
+						}
+					}
+					&:hover {
+						background-color: $primary;
+						color: white;
+					}
+				}
+			}
+		}
+		.license-wrap {
+			background-color: lighten($light-grey,10%);
+			padding: 10px;
+			border-radius: 4px;
+			margin-bottom: 20px;
+			p {
+				margin-bottom: 0;
+			}
+			a.remove {
+				color: $grey;
+				text-decoration: none;
+			}
+		}
+		.add-more-wrap {
+			background-color: lighten($primary, 50%);
+			padding: 10px;
+			text-align: center;
+			margin-bottom: 30px;
+			a {
+				color: $primary;
+			}
+		}
+	}
+	.modal-dialog {
+		&.larger {
+			min-width: 800px;
+			@media screen and (max-width: $break-large) {
+				min-width: auto;
+			}
+		}
+	}
+	.modal-content {
+		.modal-header {
+			border: 0;
+			h4.modal-title {
+				padding: 10px 15px;
+				text-align: center;
+				color: $primary;
+				font-size: 28px;
+			}
+		}
+	}
+	.modal-footer {
+		padding: 20px 15px;
+		text-align: center;
+		border: 0;
+		button.wai-modal-btn-simple {
+			border: 0;
+			border-bottom: 1px solid lighten($black,50%);
+			padding: 0;
+			border-radius: 0;
+			color: lighten($black,50%);
+			&:hover {
+				background: transparent;
+			}
+		}
+		.row-apply {
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -22,6 +22,8 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <script src="https://use.fontawesome.com/0e253c493d.js"></script>
+
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   </head>
@@ -31,23 +33,667 @@
     <![endif]-->
     
     <!-- Nav: Change content -->
-    <nav class="wai-nav">
+    <!-- <nav class="wai-nav">
         <div class="wai-nav-logo">
-            <a href="index.html">Place logo here</a>
+            <a href="index.html"><img src="images/gl-logo.svg" width="120px"></a>
         </div>
         <ul class="wai-nav-list">
-            <li><a href="/buildpage.html">Nav item</a></li>
-            <li><a class="wai-btn-nav" href="#text">Call To Action</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#myModal">Modal 1</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#uploadModal">Modal 2</a></li>
+            <li><a href="#!">How it works</a></li>
+            <li><a href="#!">Sign up</a></li>
+            <li><a class="wai-btn-nav" href="profile.html">Login</a></li>
+            <li class="hiring"><a href="#!">POST JOBS & FIND TALENT</span></a></li>
         </ul>
         <div class="wai-nav-icon">
-            <a href="#!"><img src="images/wai-nav-icon.svg" width="30px" height="30px" /></a>
+            <a href="index.html"><img src="images/wai-nav-icon.svg" width="30px" height="30px" /></a>
         </div>
+        <div class="mobile-nav-addons visible-xs">
+          <ul>
+            <li><a href="#!" class="mob-mag"><span class="icon-magnifier"></span></a></li>
+          </ul>
+        </div>
+    </nav> -->
+
+    <!-- Nav -->
+    <nav class="navbar navbar-default navbar-fixed-top wai-nav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <a href="#!"><img src="images/wai-nav-icon.svg" width="30px" height="30px" /></a>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="images/gl-logo.svg" width="120px"></a>
+          <a href="#!" class="search visible-xs"><img src="images/search.svg" width="30px" height="30px" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#!" data-toggle="modal" data-target="#myModal">Modal 1</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#uploadModal">Modal 2</a></li>
+            <li><a href="#!">How it works</a></li>
+            <li><a href="#!">Sign up</a></li>
+            <li class="login-btn"><a href="profile.html" class="btn btn-default navbar-btn wai-navbar-btn">Login</a></li>
+            <li class="login-btn"><a href="#!" class="btn btn-default navbar-btn wai-navbar-btn wai-navbar-btn-orange">Post Jobs &amp; Find Talent</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
+
+    <!-- Add js to show and hide this on click, remove inline display none -->
+    <div class="search-nav visible-xs" style="display: none!important;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="text" class="form-control job" id="exampleInputName2" placeholder="Job Title">
+                <span class="form-control-feedback icon-magnifier wai-icon" aria-hidden="true"></span>
+              </div>
+              <div class="form-group search-form-group">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Location">
+                <span class="form-control-feedback icon-map-marker wai-icon" aria-hidden="true"></span>
+              </div>
+              <button type="submit" class="btn btn-default wai-btn wai-btn-full">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal wai-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog larger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Apply to hundreds of security jobs<br> with a single click</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-xs-6 col-icon-arrow">
+                <span class="col-icon icon-arrow-right"></span>
+                <div class="step selected">
+                  <div class="num-wrap">
+                    <p>1</p>
+                  </div>
+                  <div class="desc">
+                    <p>Your personal details</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-6">
+                <div class="step">
+                  <div class="num-wrap">
+                    <p>2</p>
+                  </div>
+                  <div class="desc">
+                    <p>Upload CV</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <form class="gl-forms booking-form wai-signup-form">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title">Enter personal details</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="name" placeholder="First name" class="form-control gl-select-green input-clean gl-form-input-space">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="name" placeholder="Last name" class="form-control gl-select-green input-clean">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="input" placeholder="Mobile number" class="form-control gl-select-green input-clean">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="email" placeholder="Email address" class="form-control gl-select-green input-clean">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group text-center">
+                        <button class="wai-btn wai-form-btn">Create Account</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <form class="gl-forms booking-form wai-signup-form">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title">Have an account? Login in here&hellip;</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="email" placeholder="Email address" class="form-control gl-select-green input-clean gl-form-input-space">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="password" placeholder="Password" class="form-control gl-select-green input-clean">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-center"><a href="#!" class="forgot-password">Forgot password?</a></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group text-center">
+                        <button class="wai-btn wai-form-btn">Login</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload CV Modal -->
+    <div class="modal wai-modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel">
+      <div class="modal-dialog larger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="uploadModalLabel">Nearly there! You’re one step away from applying for hundreds of security jobs.</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-xs-6 col-icon-arrow">
+                <span class="col-icon icon-arrow-right"></span>
+                <div class="step selected">
+                  <div class="num-wrap">
+                    <p>1</p>
+                  </div>
+                  <div class="desc">
+                    <p>Your personal details</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-6">
+                <div class="step selected">
+                  <div class="num-wrap">
+                    <p>2</p>
+                  </div>
+                  <div class="desc">
+                    <p>Upload CV</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content-container text-center">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="icon"><span class="icon-upload2"></span> Upload CV</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="sub-title">Add your CV and easily apply to 1000s of security jobs from anywhere.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <ul class="upload-btns">
+                        <li><a href="#!"><span class="fa fa-dropbox"></span> Dropbox</a></li>
+                        <li><a href="#!"> Google Drive</a></li>
+                        <li><a href="#!" class="highlight">Select file</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>.doc, .docx, .rtf, .txt or .pdf (5MB limit)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="content-container">
+                  <div class="row text-center">
+                    <div class="col-md-12">
+                      <p class="icon"><span class="icon-profile"></span> Your Licences</p>
+                    </div>
+                  </div>
+                  <div class="row hidden-xs">
+                    <div class="col-md-4 col-xs-4">
+                      <p>Licence type</p>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                      <p>Number</p>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                      <p>Expiry date</p>
+                    </div>
+                  </div>
+                  <div class="license-wrap">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <p>SIA Door Supervisor</p>
+                      </div>
+                      <div class="col-md-4">
+                        <p>1102 0304 0506 7781</p>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p>19/07/18</p>
+                          </div>
+                          <div class="col-md-6 text-right">
+                            <a href="#!" class="remove"><span class="icon-cross"></span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form class="gl-forms booking-form">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group gl-form-group">
+                              <input type="text" placeholder="licence type" class="form-control gl-select-green input-clean">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group gl-form-group">
+                              <input type="text" placeholder="licence number" class="form-control gl-select-green input-clean gl-form-input-space">
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group gl-form-group">
+                              <input type="text" placeholder="Date" class="form-control gl-select-green input-clean">
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group gl-form-group">
+                              <a href="#!" class="wai-btn add-btn">Add <span class="icon-plus"></span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="add-more-wrap">
+                        <a href="#!">Add more <span class="icon-plus"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-md-12">
+                      <p class="icon"><span class="icon-car2"></span> UK Driving Licence?</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form class="gl-forms booking-form">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group gl-form-group">
+                              <input type="text" placeholder="licence type" class="form-control gl-select-green input-clean">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group gl-form-group">
+                              <input type="text" placeholder="licence number" class="form-control gl-select-green input-clean gl-form-input-space">
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group gl-form-group">
+                              <input type="text" placeholder="Date" class="form-control gl-select-green input-clean">
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-group gl-form-group">
+                              <a href="#!" class="wai-btn add-btn">Add <span class="icon-plus"></span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row row-apply">
+              <div class="col-md-12 text-center">
+                <p><a href="#!" class="wai-btn">Start Applying</a></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Hero: Change content -->
     <section class="hero">
-      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Find and apply for 1000s of security jobs</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Job Title">
+                <span class="icon-magnifier"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Location">
+                <span class="icon-map-marker"></span>
+              </div>
+              <button type="submit" class="btn btn-default">Search</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li><a href="#!">Upload your cv <span class="icon-upload2"></span></a></li>
+              <li><a href="#!">Post jobs for free <span class="icon-briefcase"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section class="security-pro hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>For security professionals</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-icon-arrow">
+            <span class="col-icon icon-arrow-right"></span>
+            <div class="step">
+              <div class="num-wrap">
+                <p>1</p>
+              </div>
+              <div class="desc">
+                <p>Create your <span>FREE</span> account</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-icon-arrow">
+            <span class="col-icon icon-arrow-right"></span>
+            <div class="step">
+              <div class="num-wrap">
+                <p>2</p>
+              </div>
+              <div class="desc">
+                <p>Upload or create a CV</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step">
+              <div class="num-wrap">
+                <p>3</p>
+              </div>
+              <div class="desc">
+                <p>Reach employers with 1-click apply</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="cta"><a href="#!" class="wai-btn">START APPLYING FOR JOBS</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-exist hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h2>Why we exist?</h2>
+            <p class="sub">Get Licensed Security Careers is the only jobs platform dedicated to security professionals.</p>
+            <p class="main">Every year, over 10,000 security professionals chose us for their training needs. With over 300,000 trained, we think we know a thing or two about security. We asked ourselves how can we help more and the answer is our dedicated jobs platform for security professionals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="security-pro for-employers hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>For employers</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-icon-arrow">
+            <span class="col-icon icon-arrow-right"></span>
+            <div class="step">
+              <div class="num-wrap">
+                <p>1</p>
+              </div>
+              <div class="desc">
+                <p>Post a job</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-icon-arrow">
+            <span class="col-icon icon-arrow-right"></span>
+            <div class="step">
+              <div class="num-wrap">
+                <p>2</p>
+              </div>
+              <div class="desc">
+                <p>Reach <span>10,000+</span> security professionals</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step">
+              <div class="num-wrap">
+                <p>3</p>
+              </div>
+              <div class="desc">
+                <p>Get CVs in your inbox</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="cta"><a href="#!" class="wai-btn white-border">START APPLYING FOR JOBS</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="per-post hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="no-wrapper">
+              <span class="icon-cross-circle"></span>
+              <p>No hidden fees</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="no-wrapper">
+              <p class="only">Only</p>
+              <p class="price">£99</p>
+              <p class="per-post">per posting</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="no-wrapper">
+              <span class="icon-cross-circle"></span>
+              <p>No other charges</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sitemap hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">About us</p>
+            <ul class="sitemap-list">
+              <li><a href="about-us.html">Our family</a></li>
+              <li><a href="about-us.html">Our values</a></li>
+              <li><a href="about-us.html">Our courses</a></li>
+              <li><a href="corporate.html">Our corporate offering</a></li>
+              <li><a href="contact-us.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Popular courses</p>
+            <ul class="sitemap-list">
+              <li><a href="course.html">Door supervisor</a></li>
+              <li><a href="course.html">Security guard</a></li>
+              <li><a href="course.html">CCTV</a></li>
+              <li><a href="course.html">Close protection</a></li>
+              <li><a href="course.html">Personal license</a></li>
+              <li><a href="course.html">First aid</a></li>
+              <li><a href="course.html">Physical intervention    </a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Locations</p>
+            <ul class="sitemap-list">
+              <li><a href="location.html">Birmingham</a></li>
+              <li><a href="location.html">Brighton</a></li>
+              <li><a href="location.html">Bristol</a></li>
+              <li><a href="location.html">Leeds</a></li>
+              <li><a href="location.html">Manchester</a></li>
+              <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
+                <div class="panel panel-default gl-panel">
+                  <div role="tab" id="headingZero" class="panel-heading gl-panel-heading">
+                    <h4 class="panel-title gl-panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="true" aria-controls="collapseZero" class="gl-footer-accordion">
+                        <collapsible>More locations<span class="icon-plus gl-sitemap-icon"></span></collapsible></a></h4>
+                  </div>
+                  <div id="collapseZero" role="tabpanel" aria-labelledby="headingZero" class="panel-collapse collapse">
+                    <div class="panel-body gl-panel-body">
+                      <ul class="sitemap-list">
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="location.html">Location</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Licenses</p>
+            <ul class="sitemap-list">
+              <li><a href="license.html">SIA Door supervisor license</a></li>
+              <li><a href="license.html">SIA CCTV license</a></li>
+              <li><a href="license.html">SIA Security guard license</a></li>
+              <li><a href="license.html">SIA Close protection license</a></li>
+              <li><a href="how-to.html">How to apply for an SIA License</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Community</p>
+            <ul class="sitemap-list">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">General FAQ's</a></li>
+              <li><a href="#!">Chat with us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <p class="sitemap-header">Social</p>
+            <ul class="sitemap-list">
+              <li>
+                <ul class="footer-social-icons">
+                  <li><a href="https://www.facebook.com/sialicence"><i class="fa fa-facebook fa-lg"></i></a></li>
+                  <li><a href="https://twitter.com/Get_Licensed"><i class="fa fa-twitter fa-lg"></i></a></li>
+                  <li><a href="https://plus.google.com/+getlicensed"><i class="fa fa-google fa-lg"></i></a></li>
+                  <li><a href="https://www.instagram.com/get_licensed/"><i class="fa fa-instagram fa-lg"></i></a></li>
+                  <li><a href="https://www.youtube.com/user/getlicensed"><i class="fa fa-youtube fa-lg"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-logos">
+              <p class="logo pull-left"><a href="#!"><img src="images/norton_secure_seal.svg" width="120px" height="65px" alt="Norton Secure Logo"></a></p>
+              <p class="logo pull-left"><a href="#!"><img src="http://awsmedia.s3.amazonaws.com/AWS_Logo_PoweredBy_127px.png" width="127px" height="48px" alt="Amazon logo"></a></p>
+              <p class="logo register-text pull-left">Get Licensed is a registered trademark of Get Licensed LLC. Get Licensed is an advertising platform and not a training provider.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="hidden-xs">
+      <div class="container footer-container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-content-wrapper">
+              <p class="footer-logo pull-left"><a href="#!"> <img src="images/get-licensed-logo-white.svg" width="120px" height="36px" alt="Get Licensed logo"></a></p>
+              <p class="copyright pull-left">© Copyright 2015 | All rights reserved | Call us 0207 078 7259</p>
+              <p class="terms pull-right"><a href="terms-and-conditions.html">Terms of service | Privacy policy</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
       
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

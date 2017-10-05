@@ -1,3 +1,17 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+
+.col-icon-arrow {
+	position: relative;
+	span.col-icon {
+		position: absolute;
+		right: 0;
+		top: 25px;
+		font-size: 16px;
+		color: $grey;
+		@media screen and (max-width: $break-large) {
+			right: -5px;
+		}
+	}
+}

@@ -1,0 +1,91 @@
+section.hero {
+	position: relative;
+	min-height: 600px;
+	background: url(../../images/hero.png) no-repeat center center fixed;
+	background-size: cover;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 90px;
+	padding: 60px 0;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to top, $primary, lighten($primary, 50%));
+		opacity: 0.75;
+	}
+	@media screen and (max-width: $break-large) {
+		margin-bottom: 0px;
+		height: 100vh;
+		margin-top: 0;
+	}
+	h1 {
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+	form {
+		margin-bottom: 40px;
+		.form-group {
+			position: relative;
+			span {
+				position: absolute;
+				right: 20px;
+				top: 15px;
+				font-size: 20px;
+				color: $primary;
+			}
+		}
+		.form-control {
+			border: 0;
+			height: 50px;
+			margin-right: 10px;
+			min-width: 320px;
+		}
+		.btn {
+			padding: 15px 20px;
+			color: white;
+			background: $secondary;
+			border: 0;
+			min-width: 160px;
+			font-weight: 600;
+			@include transition (all 200ms ease);
+			&:hover {
+				background: darken($secondary, 10%);
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin-left: 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+			a {
+				border: 1px solid white;
+				padding: 10px 20px;
+				color: white;
+				border-radius: 4px;
+				font-size: 12px;
+				text-transform: uppercase;
+				text-decoration: none;
+				span {
+					font-size: 14px;
+					margin-left: 5px;
+				}
+				@media screen and (max-width: $break-large) {
+					padding: 8px;
+				}
+			}
+		}
+	}
+}
