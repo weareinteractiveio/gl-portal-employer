@@ -3,18 +3,22 @@
 	padding: 20px;
 	border: 1px solid lighten($black, 90%);
 	border-radius: 4px;
-	p.form-title {
-		text-align: center;
-		color: $grey;
-		font-size: 16px;
-		margin-bottom: 20px;
-		font-weight: 600;
-	}
 	a.forgot-password {
 		color: $grey;
 		text-decoration: none;
 		border-bottom: 1px solid $grey;
 		font-size: 14px;
+	}
+}
+
+p.form-title {
+	text-align: center;
+	color: $grey;
+	font-size: 16px;
+	margin-bottom: 20px;
+	font-weight: 600;
+	&.title-left {
+		text-align: left;
 	}
 }
 

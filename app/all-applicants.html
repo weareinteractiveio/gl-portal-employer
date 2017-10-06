@@ -33,7 +33,7 @@
     <![endif]-->
     
     <!-- Nav Logged In -->
-    <nav class="navbar navbar-default wai-nav no-margin">
+    <nav class="navbar navbar-default wai-nav">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -48,11 +48,17 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse mobile-navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right mobile-nav-logged-in">
-            <li class="hidden-xs"><a href="search.html">Search</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#saveModal">Modal 1</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#postModal">Modal 2</a></li>
             <li class="user hidden-xs">
-              <a href="#">My Account
-                <span class="user icon-user"></span>
+              <a href="#">My Jobs
+                <span class="user icon-briefcase"></span>
                 <span class="notification">2</span>
+              </a>
+            </li>
+            <li class="user hidden-xs">
+              <a href="#">My Profile
+                <span class="user icon-user"></span>
               </a>
             </li>
             <li class="login-btn hidden-xs">
@@ -90,172 +96,315 @@
       </div>
     </div>
 
-    <section class="filter-bar filter-bar-map hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <form class="gl-forms booking-form">
+    <!-- Offer Modal -->
+    <div class="modal wai-modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="saveModalLabel">
+      <div class="modal-dialog larger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="row row-plus">
+              <div class="col-md-12">
+                <div class="offer-title">
+                  <p>Save money with more credits</p>
+                </div>
+                <p class="text-center">You’ve got 0 Credits, top up and post your job instantly</p>
+              </div>
+            </div>
+            <div class="row row-plus">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-3 col-md-offset-3">
+                    <div class="creds-wrap">
+                      <p class="cred-num">3</p>
+                      <p class="creds">Credits</p>
+                      <div class="creds-breaker"></div>
+                      <p class="job-post">1 Job post</p>
+                      <p class="price">£99</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="creds-wrap selected">
+                      <p class="cred-num">30</p>
+                      <p class="creds">Credits</p>
+                      <div class="creds-breaker"></div>
+                      <p class="job-post">10 Job posts</p>
+                      <p class="price">50% discount</p>
+                      <p class="price">£499</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-plus">
+              <div class="col-md-12 text-center">
+                <p class="creds-chosen">You’ve chosen 30 Credits for £499</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <p><a href="#!" class="wai-btn">SAVE £500 AND CHECKOUT</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Modal -->
+    <div class="modal wai-modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel">
+      <div class="modal-dialog larger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="postModalLabel">Create a new job post</h4>
+          </div>
+          <div class="modal-body">
+            <div class="content-container no-margin">
               <div class="row">
-                <div class="col-md-3">
-                  <div class="form-group gl-form-group">
-                    <input type="text" placeholder="Licence type" class="form-control gl-select-green input-clean">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title title-left">Basic information</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="name" placeholder="job name" class="form-control gl-select-green input-clean gl-form-input-space">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <select class="form-control">
+                          <option>Hours per week</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="form-group gl-form-group">
-                    <input type="text" placeholder="Location" class="form-control gl-select-green input-clean gl-form-input-space">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title title-left">&nbsp;</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="form-group gl-form-group">
-                    <select class="form-control">
-                      <option>+ 2 miles</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <select class="form-control">
+                          <option>Salary</option>
+                          <option>£19,000</option>
+                          <option>£25,000</option>
+                          <option>£30,000</option>
+                          <option>£35,000</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="form-group gl-form-group">
-                    <p class="results">Showing 247 results</p>
+                  <div class="row row-plus-sml">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="name" placeholder="Location or postcode" class="form-control gl-select-green input-clean gl-form-input-space">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
-          <div class="col-md-3">
-            <div class="filter-btn-wrap">
-              <ul>
-                <li><a href="#!" class="wai-btn filter-btn  ">Filters <span class="icon-chevron-down arrow"></span></a></li>
-                <li><a href="search.html" class="wai-btn filter-btn"><span class="icon-list map"></span> List</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mobile filter bar -->
-    <section class="filter-bar filter-bar-map filter-mobile-closed visible-xs">
-      <div class="container">
-        <div class="close-cross">
-          <a href="#!"><span class="icon-cross"></span></a>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-12">
-                <p class="mobile-title">Door Supervisor jobs in Manchester</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <p class="mobile-results">Showing 427 results</p>
-              </div>
-            </div>
-            <div class="filter-btn-wrap">
-              <ul>
-                <li><a href="mobile-filters.html" class="wai-btn filter-btn">Filters <span class="icon-chevron-down arrow"></span></a></li>
-                <li><a href="search.html" class="wai-btn filter-btn"><span class="icon-list map"></span> List</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="map-mobile visible-xs">
-      <div class="map-footer">
-        <p class="number-result">2 of 15</p>
-        <p class="number-location">2 jobs at this location</p>
-      </div>
-    </section>
-
-    <section class="profile search map">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4 col-md-offset-8 col-zero">
-            <div class="map-right-wrapper">
-              <div class="row row-plus-sml hidden-xs">
-                <div class="col-md-12 col-flex">
-                  <div class="loc-pin">
-                    <span class="icon-map-marker"></span>
+              <div class="row row-plus-sml">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title title-left">Licenses required</p>
+                    </div>
                   </div>
-                  <p class="header"><span>5</span> jobs in this location</p>
-                  <div class="close">
-                    <span class="icon-cross"></span>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="checkbox-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Full UK driving license
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Security guard
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Close protection
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            CCTV License
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Personal License
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <img src="images/map-modal.png" alt="Google Map" width="100%">
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <div class="gl-card jp-search-card visible-xs">
-                    <div class="row row-flex row-plus-x-sml">
-                      <div class="col-md-6 col-xs-9 col-flex">
-                        <p class="sr-title">
-                          Store security guard
-                        </p>
-                        <div class="star"><img src="images/green-star.svg" alt="Green star" width="20px"></div>
-                      </div>
-                      <div class="col-md-6 col-xs-3">
-                        <p class="ph">£8 p/h</p>
+                  <p class="form-title title-left">Job description</p>
+                </div>
+              </div>
+              <div class="row row-plus">
+                <div class="col-md-12">
+                  <div class="form-group gl-form-group">
+                    <textarea class="form-control" rows="10"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-plus-sml">
+                <div class="col-md-12 text-center">
+                  <p><a href="#!" class="wai-btn">POST JOB FOR 3 CREDITS</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="profile search applicants">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h4>My Profile</h4>
+            <div class="profile-name">
+              <div class="row row-plus-sml">
+                <div class="col-md-12">
+                  <div class="row row-flex">
+                    <div class="col-md-6">
+                      <div class="profile-img">
+                        <img src="images/profile-img.png" alt="Profile Image" width="96px">
                       </div>
                     </div>
-                    <div class="row row-flex">
-                      <div class="col-md-6 col-xs-6">
-                        <p class="brand"><span>Tesco</span> Salford Quays</p>
-                      </div>
-                      <div class="col-md-6 col-xs-6">
-                        <p class="text-right">14 Days ago</p>
-                      </div>
-                    </div>
-                    <div class="card-license-wrap">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <p>Licences required</p>
-                        </div>
-                      </div>
-                      <div class="row row-flex mobile">
-                        <div class="col-md-4 col-xs-12 col-flex">
-                          <p class="card-icon"><span class="icon-profile"></span></p>
-                          <p class="card-license">Door Supervisor</p>
-                        </div>
-                        <div class="col-md-4 col-xs-12 col-flex">
-                          <p class="card-icon"><span class="icon-car2"></span></p>
-                          <p class="card-license">Full UK Driving Licence</p>
-                        </div>
-                        <div class="col-md-4 col-xs-12">
-                          <p class="text-right"><a href="jobpage.html" class="wai-btn">View Job</a></p>
-                        </div>
-                      </div>
+                    <div class="col-md-6">
+                      <p class="name">Peter Perkins</p>
                     </div>
                   </div>
-                  <div class="gl-card jp-search-card visible-xs">
+                </div>
+              </div>
+            </div>
+            <div class="row row-plus">
+              <div class="col-md-12">
+                <div class="profile-left-wrap">
+                  <a href="#!" class="pencil"><span class="icon-pencil-line"></span></a>
+                  <p class="email">Peter_perky@gmail.com</p>
+                  <p>07843 872373</p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-plus-sml">
+              <div class="col-md-12">
+                <div class="profile-left-wrap">
+                  <a href="#!" class="pencil"><span class="icon-pencil-line"></span></a>
+                  <p class="email">G4S Security LTD</p>
+                  <p>10-50 Employees</p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-plus">
+              <div class="col-md-12">
+                <div class="profile-left-wrap">
+                  <a href="#!" class="pencil"><span class="icon-pencil-line"></span></a>
+                  <p class="email">Visa Debit</p>
+                  <p>Expires 31/09/18</p>
+                  <p>01/08 123</p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-plus visible-xs">
+              <div class="col-md-12">
+                <p><a href="#!" class="wai-btn wai-btn-full">Save Changes</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-md-offset-1 hidden-xs">
+            <div class="get-creds">
+              <div class="row row-plus">
+                <div class="col-md-8">
+                  <p class="name">Hey Peter,</p>
+                  <p class="creds-spend">You’ve got 0 credits to spend, keep them topped up and save money!</p>
+                </div>
+                <div class="col-md-4 text-right">
+                  <p class="get-creds-btn"><a href="#!" class="wai-btn">Get Credits</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="profile.html" class="applicant-title-link"><h4 class="applicant-title"><span class="icon icon-arrow-left"></span> Applicants for <span>Security Guard</span></h4></a>
+              </div>
+              <div class="col-md-6">
+                <p class="text-right"><a href="#!" class="wai-btn wai-btn-clean">Create new job post</a></p>
+              </div>
+            </div>
+            <div class="row row-plus">
+              <div class="col-md-12">
+                <p class="all-applicants">All Applicants</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="gl-card jp-search-card">
                   <div class="row row-flex row-plus-x-sml">
                     <div class="col-md-6 col-xs-9 col-flex">
                       <p class="sr-title">
-                        Store security guard
+                        Joe Bushby
                       </p>
                       <div class="star"><img src="images/green-star.svg" alt="Green star" width="20px"></div>
                     </div>
                     <div class="col-md-6 col-xs-3">
-                      <p class="ph">£8 p/h</p>
+                      <p class="ph"><a href="#!"><span class="icon-cross"></span></a></p>
                     </div>
                   </div>
                   <div class="row row-flex">
                     <div class="col-md-6 col-xs-6">
-                      <p class="brand"><span>Tesco</span> Salford Quays</p>
+                      <p class="brand"><span>07737 202934</span></p>
                     </div>
                     <div class="col-md-6 col-xs-6">
-                      <p class="text-right">14 Days ago</p>
+                      <p class="text-right"><a href="#!" class="wai-btn wai-btn-clean no-x-pad wai-btn-sml">Email</a></p>
                     </div>
                   </div>
                   <div class="card-license-wrap">
                     <div class="row">
                       <div class="col-md-12">
-                        <p>Licences required</p>
+                        <p>Licences held</p>
                       </div>
                     </div>
                     <div class="row row-flex mobile">
@@ -268,82 +417,71 @@
                         <p class="card-license">Full UK Driving Licence</p>
                       </div>
                       <div class="col-md-4 col-xs-12">
-                        <p class="text-right"><a href="jobpage.html" class="wai-btn">View Job</a></p>
+                        <p class="text-right"><a href="jobpage.html" class="wai-btn">Download CV <span class="icon-download2"></span></a></p>
                       </div>
                     </div>
                   </div>
                 </div>
-                  <div class="gl-card jp-search-card first hidden-xs">
-                    <div class="row row-flex row-plus-x-sml">
-                      <div class="col-md-8 col-flex">
-                        <p class="sr-title small">
-                          Store security guard
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <p class="ph small">£8 p/h</p>
-                      </div>
+                <div class="gl-card jp-search-card">
+                  <div class="row row-flex row-plus-x-sml">
+                    <div class="col-md-6 col-xs-9 col-flex">
+                      <p class="sr-title">
+                        Matt Petrie
+                      </p>
+                      <div class="star"><img src="images/green-star.svg" alt="Green star" width="20px"></div>
                     </div>
-                    <div class="row row-flex">
-                      <div class="col-md-6">
-                        <p class="brand"><span>Tesco</span> Salford Quays</p>
-                      </div>
-                      <div class="col-md-6">
-                        <p class="text-right">14 Days ago</p>
-                      </div>
-                    </div>
-                    <div class="card-license-wrap small">
-                      <div class="row row-flex">
-                        <div class="col-md-2 col-flex">
-                          <p class="card-icon"><span class="icon-profile"></span></p>
-                        </div>
-                        <div class="col-md-2 col-flex">
-                          <p class="card-icon"><span class="icon-car2"></span></p>
-                        </div>
-                        <div class="col-md-8">
-                          <p class="text-right map-btn"><a href="jobpage.html" class="wai-btn card-map-btn">View Job</a></p>
-                        </div>
-                      </div>
+                    <div class="col-md-6 col-xs-3">
+                      <p class="ph"><a href="#!"><span class="icon-cross"></span></a></p>
                     </div>
                   </div>
-                  <div class="gl-card jp-search-card hidden-xs">
-                    <div class="row row-flex row-plus-x-sml">
-                      <div class="col-md-8 col-flex">
-                        <p class="sr-title small">
-                          Store security guard
-                        </p>
-                      </div>
-                      <div class="col-md-4">
-                        <p class="ph small">£8 p/h</p>
+                  <div class="row row-flex">
+                    <div class="col-md-6 col-xs-6">
+                      <p class="brand"><span>07737 202934</span></p>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                      <p class="text-right"><a href="#!" class="wai-btn wai-btn-clean no-x-pad wai-btn-sml">Email</a></p>
+                    </div>
+                  </div>
+                  <div class="card-license-wrap">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Licences held</p>
                       </div>
                     </div>
-                    <div class="row row-flex">
-                      <div class="col-md-6">
-                        <p class="brand"><span>Tesco</span> Salford Quays</p>
+                    <div class="row row-flex mobile">
+                      <div class="col-md-4 col-xs-12 col-flex">
+                        <p class="card-icon"><span class="icon-profile"></span></p>
+                        <p class="card-license">Door Supervisor</p>
                       </div>
-                      <div class="col-md-6">
-                        <p class="text-right">14 Days ago</p>
+                      <div class="col-md-4 col-xs-12 col-flex">
+                        <p class="card-icon"><span class="icon-car2"></span></p>
+                        <p class="card-license">Full UK Driving Licence</p>
                       </div>
-                    </div>
-                    <div class="card-license-wrap small">
-                      <div class="row row-flex">
-                        <div class="col-md-2 col-flex">
-                          <p class="card-icon"><span class="icon-profile"></span></p>
-                        </div>
-                        <div class="col-md-2 col-flex">
-                          <p class="card-icon"><span class="icon-car2"></span></p>
-                        </div>
-                        <div class="col-md-8">
-                          <p class="text-right map-btn"><a href="#!" class="wai-btn card-map-btn">View Job</a></p>
-                        </div>
+                      <div class="col-md-4 col-xs-12">
+                        <p class="text-right"><a href="jobpage.html" class="wai-btn">Download CV <span class="icon-download2"></span></a></p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row visible-xs">
-                <div class="col-md-12">
-                  <p class="load-more"><a href="#!" class="wai-btn wai-btn-clean">Load more</a></p>
+                <div class="row hidden-xs">
+                  <div class="col-md-12">
+                    <nav class="pull-right gl-pagination">
+                      <ul class="pagination">
+                        <li><a href="#!" aria-label="previous"><span aria-hidden="true" class="icon-chevron-left"></span></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li><a href="#!">2</a></li>
+                        <li><a href="#!">3</a></li>
+                        <li><a href="#!">4</a></li>
+                        <li><a href="#!">5</a></li>
+                        <li><a href="#!" aria-label="next"><span aria-hidden="true" class="icon-chevron-right"></span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="row visible-xs">
+                  <div class="col-md-12">
+                    <p class="load-more"><a href="#!" class="wai-btn wai-btn-clean">Load more</a></p>
+                  </div>
                 </div>
               </div>
             </div>

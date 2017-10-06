@@ -4,6 +4,9 @@
 		padding: 20px;
 		border: 1px solid lighten($black, 90%);
 		border-radius: 4px;
+		&.no-margin {
+			margin-top: 0;
+		}
 		p.icon {
 			font-size: 20px;
 			margin-bottom: 20px;
@@ -113,5 +116,73 @@
 		.row-apply {
 			margin-bottom: 20px;
 		}
+	}
+	.positive {
+		margin-bottom: 15px;
+		&.last {
+			margin-bottom: 0;
+		}
+		.icon {
+			float: left;
+			margin-right: 10px;
+			margin-top: 7px;
+			span {
+				font-size: 26px;
+				color: $primary;
+			}
+		}
+		p {
+			span {
+				color: $primary;
+				font-weight: 600;
+			}
+		}
+	}
+	.header-icon {
+		span {
+			color: $primary;
+			font-size: 70px;
+		}
+	}
+	.offer-title {
+		text-align: center;
+		p {
+			font-size: 32px;
+			font-weight: 600;
+			color: $grey;
+		}
+	}
+	.creds-wrap {
+		text-align: center;
+		padding: 15px;
+		@include box-shadow(0px, 0px, 30px, lighten($black, 90%));
+		margin-bottom: 20px;
+		border: 2px solid transparent;
+		border-radius: 4px;
+		p.cred-num {
+			color: $primary;
+			font-size: 32px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+		p.creds {
+			color: $grey;
+			font-size: 18px;
+			font-weight: 600;
+		}
+		.creds-breaker {
+			width: 100px;
+			display: block;
+			margin: 15px auto;
+			height: 1px;
+			background-color: $light-grey;
+		}
+		&.selected {
+			border: 2px solid $primary;
+		}
+	}
+	.creds-chosen {
+		color: $primary;
+		font-size: 18px;
 	}
 }

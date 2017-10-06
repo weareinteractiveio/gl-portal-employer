@@ -73,6 +73,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#!" data-toggle="modal" data-target="#myModal">Modal 1</a></li>
             <li><a href="#!" data-toggle="modal" data-target="#uploadModal">Modal 2</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#offerModal">Modal 3</a></li>
+            <li><a href="#!" data-toggle="modal" data-target="#postModal">Modal 4</a></li>
             <li><a href="#!">How it works</a></li>
             <li><a href="#!">Sign up</a></li>
             <li class="login-btn"><a href="profile.html" class="btn btn-default navbar-btn wai-navbar-btn">Login</a></li>
@@ -109,11 +111,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Apply to hundreds of security jobs<br> with a single click</h4>
+            <h4 class="modal-title" id="myModalLabel">Get instant access to over 10,000+ Security professionals</h4>
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-md-6 col-xs-6 col-icon-arrow">
+              <div class="col-md-4 col-xs-4 col-icon-arrow">
                 <span class="col-icon icon-arrow-right"></span>
                 <div class="step selected">
                   <div class="num-wrap">
@@ -124,13 +126,24 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-xs-6">
+              <div class="col-md-4 col-xs-4 col-icon-arrow">
+              <span class="col-icon icon-arrow-right"></span>
                 <div class="step">
                   <div class="num-wrap">
                     <p>2</p>
                   </div>
                   <div class="desc">
-                    <p>Upload CV</p>
+                    <p>About your business</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <div class="step">
+                  <div class="num-wrap">
+                    <p>3</p>
+                  </div>
+                  <div class="desc">
+                    <p>Post your job</p>
                   </div>
                 </div>
               </div>
@@ -224,17 +237,17 @@
       </div>
     </div>
 
-    <!-- Upload CV Modal -->
+    <!-- About Your Business Modal -->
     <div class="modal wai-modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel">
       <div class="modal-dialog larger" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="uploadModalLabel">Nearly there! You’re one step away from applying for hundreds of security jobs.</h4>
+            <h4 class="modal-title" id="uploadModalLabel">Nearly there! We just need a bit of information about your business.</h4>
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-md-6 col-xs-6 col-icon-arrow">
+              <div class="col-md-4 col-xs-4 col-icon-arrow">
                 <span class="col-icon icon-arrow-right"></span>
                 <div class="step selected">
                   <div class="num-wrap">
@@ -245,42 +258,90 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-xs-6">
+              <div class="col-md-4 col-xs-4 col-icon-arrow">
+              <span class="col-icon icon-arrow-right"></span>
                 <div class="step selected">
                   <div class="num-wrap">
                     <p>2</p>
                   </div>
                   <div class="desc">
-                    <p>Upload CV</p>
+                    <p>About your business</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <div class="step">
+                  <div class="num-wrap">
+                    <p>3</p>
+                  </div>
+                  <div class="desc">
+                    <p>Post your job</p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="content-container text-center">
+                <div class="content-container">
                   <div class="row">
-                    <div class="col-md-12">
-                      <p class="icon"><span class="icon-upload2"></span> Upload CV</p>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p class="form-title">Details about your business</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <input type="name" placeholder="Business name" class="form-control gl-select-green input-clean gl-form-input-space">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <select class="form-control">
+                              <option>Number of employees</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p class="sub-title">Add your CV and easily apply to 1000s of security jobs from anywhere.</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <ul class="upload-btns">
-                        <li><a href="#!"><span class="fa fa-dropbox"></span> Dropbox</a></li>
-                        <li><a href="#!"> Google Drive</a></li>
-                        <li><a href="#!" class="highlight">Select file</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p>.doc, .docx, .rtf, .txt or .pdf (5MB limit)</p>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="positive">
+                            <div class="icon">
+                              <span class="icon-shield-check"></span>
+                            </div>
+                            <p><span>10,000 Quality qualified candidates</span> <br>at your fingertips</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="positive">
+                            <div class="icon">
+                              <span class="icon-trophy"></span>
+                            </div>
+                            <p><span>UK’s number 1</span> <br>security job site</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="positive last">
+                            <div class="icon">
+                              <span class="icon-alarm-check"></span>
+                            </div>
+                            <p class="last"><span>Post instantly</span> <br>with our quickpost system</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -289,37 +350,59 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="content-container">
-                  <div class="row text-center">
+                  <div class="row">
                     <div class="col-md-12">
-                      <p class="icon"><span class="icon-profile"></span> Your Licences</p>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p class="form-title title-left">Payment Method</p>
+                        </div>
+                      </div>
+                      <div class="row row-plus-sml">
+                        <div class="col-md-12">
+                          <p>Don’t worry, we won’t charge you anything now, we need to take your details for verification purposes, you’ll be able to buy credits to post jobs shortly.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="row hidden-xs">
-                    <div class="col-md-4 col-xs-4">
-                      <p>Licence type</p>
-                    </div>
-                    <div class="col-md-4 col-xs-4">
-                      <p>Number</p>
-                    </div>
-                    <div class="col-md-4 col-xs-4">
-                      <p>Expiry date</p>
-                    </div>
-                  </div>
-                  <div class="license-wrap">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <p>SIA Door Supervisor</p>
+                  <div class="row row-plus-sml">
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>Enter your credit card information</p>
+                        </div>
                       </div>
-                      <div class="col-md-4">
-                        <p>1102 0304 0506 7781</p>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>19/07/18</p>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <input type="name" placeholder="Name on card" class="form-control gl-select-green input-clean gl-form-input-space">
                           </div>
-                          <div class="col-md-6 text-right">
-                            <a href="#!" class="remove"><span class="icon-cross"></span></a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <input type="name" placeholder="Card number" class="form-control gl-select-green input-clean gl-form-input-space">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>Billing address</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <input type="name" placeholder="House name/number" class="form-control gl-select-green input-clean gl-form-input-space">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <input type="name" placeholder="Postcode" class="form-control gl-select-green input-clean gl-form-input-space">
                           </div>
                         </div>
                       </div>
@@ -327,71 +410,59 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <form class="gl-forms booking-form">
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group gl-form-group">
-                              <input type="text" placeholder="licence type" class="form-control gl-select-green input-clean">
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group gl-form-group">
-                              <input type="text" placeholder="licence number" class="form-control gl-select-green input-clean gl-form-input-space">
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group gl-form-group">
-                              <input type="text" placeholder="Date" class="form-control gl-select-green input-clean">
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group gl-form-group">
-                              <a href="#!" class="wai-btn add-btn">Add <span class="icon-plus"></span></a>
-                            </div>
-                          </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>Expiry date</p>
                         </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="add-more-wrap">
-                        <a href="#!">Add more <span class="icon-plus"></span></a>
                       </div>
                     </div>
                   </div>
-                  <div class="row text-center">
-                    <div class="col-md-12">
-                      <p class="icon"><span class="icon-car2"></span> UK Driving Licence?</p>
-                    </div>
-                  </div>
                   <div class="row">
-                    <div class="col-md-12">
-                      <form class="gl-forms booking-form">
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group gl-form-group">
-                              <input type="text" placeholder="licence type" class="form-control gl-select-green input-clean">
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group gl-form-group">
-                              <input type="text" placeholder="licence number" class="form-control gl-select-green input-clean gl-form-input-space">
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group gl-form-group">
-                              <input type="text" placeholder="Date" class="form-control gl-select-green input-clean">
-                            </div>
-                          </div>
-                          <div class="col-md-2">
-                            <div class="form-group gl-form-group">
-                              <a href="#!" class="wai-btn add-btn">Add <span class="icon-plus"></span></a>
-                            </div>
+                    <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <select class="form-control">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
                           </div>
                         </div>
-                      </form>
+                      </div>
                     </div>
+                    <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <select class="form-control">
+                              <option>2018</option>
+                              <option>2017</option>
+                              <option>2016</option>
+                              <option>2015</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group gl-form-group">
+                            <input type="name" placeholder="CVC" class="form-control gl-select-green input-clean gl-form-input-space">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-top row-plus-sml">
+                  <div class="col-md-6 text-right">
+                    <img src="images/trust-pilot-modal.svg" alt="Trust Pilot Logo" width="110px">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="images/secure-modal.svg" alt="Secure Logo" width="110px">
                   </div>
                 </div>
               </div>
@@ -400,7 +471,7 @@
           <div class="modal-footer">
             <div class="row row-apply">
               <div class="col-md-12 text-center">
-                <p><a href="#!" class="wai-btn">Start Applying</a></p>
+                <p><a href="#!" class="wai-btn">Verify Account</a></p>
               </div>
             </div>
             <div class="row">
@@ -408,6 +479,227 @@
                 <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Cancel</button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offer Modal -->
+    <div class="modal wai-modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModalLabel">
+      <div class="modal-dialog larger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="header-icon text-center">
+              <span class="icon-checkmark-circle"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row row-plus">
+              <div class="col-md-12">
+                <div class="offer-title">
+                  <p>Get 10 jobs posts for £499</p>
+                </div>
+                <p class="text-center">Get our special introductory haf price job postings, and get going right away</p>
+              </div>
+            </div>
+            <div class="row row-plus-sml">
+              <div class="col-md-12 text-center">
+                <p><a href="#!" class="wai-btn">Add and continue</a></p>
+              </div>
+            </div>
+            <div class="row row-plus">
+              <div class="col-md-12 text-center">
+                <p><a href="#!" class="wai-btn wai-btn-clean no-x-pad">Continue without offer</a></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <p>*Usual price for 10 standalone job posts £999</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Modal -->
+    <div class="modal wai-modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel">
+      <div class="modal-dialog larger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="postModalLabel">Create your first job post for £99 and reach 10,000 candidates instantly</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row row-plus">
+              <div class="col-md-4 col-xs-4 col-icon-arrow">
+                <span class="col-icon icon-arrow-right"></span>
+                <div class="step selected">
+                  <div class="num-wrap">
+                    <p>1</p>
+                  </div>
+                  <div class="desc">
+                    <p>Your personal details</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-4 col-icon-arrow">
+              <span class="col-icon icon-arrow-right"></span>
+                <div class="step selected">
+                  <div class="num-wrap">
+                    <p>2</p>
+                  </div>
+                  <div class="desc">
+                    <p>About your business</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <div class="step selected">
+                  <div class="num-wrap">
+                    <p>3</p>
+                  </div>
+                  <div class="desc">
+                    <p>Post your job</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-container">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title title-left">Basic information</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="name" placeholder="job name" class="form-control gl-select-green input-clean gl-form-input-space">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <select class="form-control">
+                          <option>Hours per week</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title title-left">&nbsp;</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <select class="form-control">
+                          <option>Salary</option>
+                          <option>£19,000</option>
+                          <option>£25,000</option>
+                          <option>£30,000</option>
+                          <option>£35,000</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row-plus-sml">
+                    <div class="col-md-12">
+                      <div class="form-group gl-form-group">
+                        <input type="name" placeholder="Location or postcode" class="form-control gl-select-green input-clean gl-form-input-space">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-plus-sml">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="form-title title-left">Licenses required</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="checkbox-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Full UK driving license
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Security guard
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Close protection
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            CCTV License
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            Personal License
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <img src="images/map-modal.png" alt="Google Map" width="100%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="form-title title-left">Job description</p>
+                </div>
+              </div>
+              <div class="row row-plus">
+                <div class="col-md-12">
+                  <div class="form-group gl-form-group">
+                    <textarea class="form-control" rows="10"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-plus-sml">
+                <div class="col-md-12 text-center">
+                  <p><a href="#!" class="wai-btn">Post job for £99</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Back to offer</button>
+            <button type="button" class="btn btn-default wai-modal-btn-simple" data-dismiss="modal">Continue to dashboard</button>
           </div>
         </div>
       </div>

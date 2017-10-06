@@ -55,9 +55,6 @@
 			background: $primary;
 			color: white;
 		}
-		&.no-x-pad {
-			padding: 12px 20px;
-		}
 		@media screen and (max-width: $break-medium) {
 			padding: 15px;
 		}
@@ -72,6 +69,12 @@
 	}
 	&.wai-btn-full {
 		width: 100%;
+	}
+	&.no-x-pad {
+		padding: 12px 20px;
+	}
+	&.wai-btn-sml {
+		padding: 6px 12px;
 	}
 }
 
